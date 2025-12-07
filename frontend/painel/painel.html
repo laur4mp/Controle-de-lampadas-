@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de iluminação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="painel.css">
+</head>
+
+<body id="boby">
+    <div class="container">
+        <div class="top-bar">
+            <h4 class="ola" id="bemvindo"></h4>
+            <button id="userbtn" data-bs-toggle="modal" data-bs-target="#modalUser">
+                <div class="user" tabindex="0">
+                    <img src="../imagens/imagem boneco.png" alt="" id="imagemBoneco">
+                </div>
+            </button>
+        </div>
+        <p class="subtitulo">Configure a iluminação da sua residência</p>
+    </div>
+
+    <div class="container-lampadas" id="container-lampadas">
+        <div class="card add-lampada">
+            <div>
+                <h1 class="addTitulo">Adicione nova lâmpada</h1>
+            </div>
+            <button class="btn-add" data-bs-toggle="modal" data-bs-target="#modalEdicao">
+                <img src="../imagens/adicionar.png" alt="Adicionar lâmpada" id="addImagem">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEdicao" tabindex="-1" aria-labelledby="tituloLampada" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloLampada">Edição lâmpada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <label>Novo horário para ligar:</label>
+                    <input type="time" id="horaLigar" class="form-control mb-2">
+                    <label>Novo horário para desligar:</label>
+                    <input type="time" id="horaDesligar" class="form-control mb-2">
+                    <label>Renomear:</label>
+                    <input type="text" id="novoNome" value="" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary salvar" 
+                    id="salvar"
+                    data-bs-dismiss="modal">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modalUser" aria-hidden="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="tituloModal"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Dados usuário: </h3>
+                    <p id="nomeUserPer"></p>
+                    <p id="emailUserModalPer"></p>
+                    <div id="botoesUser">
+                                <button class="btn btn-primary" id="btnEditarDados" data-bs-toggle="modal" data-bs-target="#modalEditarUsuario" data-bs-dismiss="modal">Editar Dados</button>
+                                <button class="btn btn-primary" id="btnAdicionarUsuario" data-bs-target="#modalAdicionarUser" data-bs-toggle="modal" data-bs-dismiss="modal">Adicionar Usuário</button>
+                                <button class="btn btn-danger" id="btnSair"> Sair</button>
+
+                            </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAdicionarUser" tabindex="-1" aria-labelledby="modalAdicionarUserLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAdicionarUserLabel">Adicionar Novo Usuário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAdicionarUsuario">
+                        <div class="mb-3">
+                            <label for="novoNomeUser" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="novoNomeUser" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="novoEmailUser" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="novoEmailUser" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="novaSenhaUser" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="novaSenhaUser" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="novaSenhaUserConfirm" class="form-label">Confirmar senha</label>
+                            <input type="password" class="form-control" id="novaSenhaUserConfirm" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success" id="btnSalvarNovoUser" form="formAdicionarUsuario">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  para editar usuário -->
+    <div class="modal fade" id="modalEditarUsuario" tabindex="-1" aria-labelledby="modalEditarUsuarioLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarUsuarioLabel">Editar usuário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditarUsuarioStatic">
+                        <div class="mb-3">
+                            <label for="editNomeUser" class="form-label">Nome completo</label>
+                            <input type="text" class="form-control" id="editNomeUser" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="editEmailUser" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmailUser" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="editSenhaAtual" class="form-label">Senha atual</label>
+                            <input type="password" class="form-control" id="editSenhaAtual" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="editSenhaUser1" class="form-label">Nova senha (opcional)</label>
+                            <input type="password" class="form-control" id="editSenhaUser1" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="editSenhaUser2" class="form-label">Confirmar nova senha</label>
+                            <input type="password" class="form-control" id="editSenhaUser2" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="btnSalvarEditarUser">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="painel.js"></script>
+</body>
+</html>

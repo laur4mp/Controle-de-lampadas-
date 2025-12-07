@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(224, 224, 224) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+}
+.container {
+    background-color: #f2f2f2 !important;
+    padding: 30px ;
+    margin: 30px auto;
+    border-radius: 12px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block; /* Alterado para não afetar o subtítulo */
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0; /* Remover espaço abaixo da barra superior */
+}
+
+.ola {
+    text-align: left;
+    margin: 0;
+    font-size: 15px;
+}
+
+.user {
+    text-align: right;
+    margin-left: 10px;
+}
+
+.subtitulo {
+    color: #769cb3 !important;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 24px !important;
+}
+
+.lampada-nome {
+    text-align: center;
+    font-size: 14px;
+}
+
+.container-lampadas{
+  display: flex;       
+  gap: 20px;           
+  flex-wrap: wrap;      
+  justify-content: center; 
+  margin-top: 20px; 
+   align-items: center;
+}
+.status{
+  font-size: 12px;
+  margin-top: 10px;
+
+}
+.card {
+   background: #b8ccd8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;     
+    height: 220px;     
+    overflow: hidden;  
+    display: flex;     
+
+}
+
+.horarios{
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  font-size: 12px;
+}
+
+.status-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.status-off {
+  color: red;
+}
+
+.status-on {
+  color: green;
+}
+
+.bnt-ligar {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.bnt-desligar {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+     margin-left: 30px
+}
+
+/*botão lápis*/
+
+.borda{
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 12px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+}
+
+.botao {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.botoes {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.botoes button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.cancelar {
+  background: #fff;
+  border: 1px solid #aaa;
+}
+
+.salvar {
+  background: green;
+  color: white;
+}
+
+
+
+
+#imagemBoneco{
+  width: 20px;
+  height: 20PX;
+ 
+}
+.user{
+  border-radius: 50%;
+  box-shadow: rgb(134, 131, 131) 0px 2px 2px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+#userbtn{
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.btn-add{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#addImagem{
+  width: 90px;
+   cursor: pointer;
+}
+.add-lampada {
+  display: none;
+  justify-items: center;
+  align-items: center;
+}
+.addTitulo{
+  font-size: 14px;
+}

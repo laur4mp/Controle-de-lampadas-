@@ -1,0 +1,54 @@
+body{
+    height: 100vh;   
+    margin: 0;
+    display: flex;
+    justify-content: center;    
+    align-items: center;       
+    background-color: #f2f2f2
+}
+#btnEntrar {
+    margin-top: 4px;
+}
+
+
+.container {
+   max-width: 400px;
+    width: 100%;
+    background: white;          
+    padding: 20px;
+    border-radius: 10px;        
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    margin-top: 20px;
+  
+}
+.link{
+    text-align: right;
+}
+.link-canva{
+text-align: right;
+ font-size: 14px;
+  color: #769cb3;
+
+}
+
+.titulo {
+  text-align: center;
+  color:#769cb3;
+}
+.subtitulo{
+      text-align: center;
+      color:#769cb3;
+}
+
+.input{
+  background-color: #769cb3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+
+
+
+

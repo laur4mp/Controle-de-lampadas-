@@ -1,3 +1,6 @@
+/* ==================================== */
+/* 1. Estilos Gerais e Container Principal */
+/* ==================================== */
 body {
     font-family: Arial, sans-serif;
     background: rgb(224, 224, 224) !important;
@@ -5,200 +8,298 @@ body {
     padding: 0 !important;
     min-height: 100vh;
 }
+
 .container {
     background-color: #f2f2f2 !important;
-    padding: 30px ;
+    padding: 30px;
     margin: 30px auto;
     border-radius: 12px;
     width: 90%;
+    max-width: 1200px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: block; /* Alterado para não afetar o subtítulo */
 }
 
+/* --- Barra Superior e Títulos --- */
 .top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    margin-bottom: 0; /* Remover espaço abaixo da barra superior */
+    margin-bottom: 0;
 }
 
 .ola {
     text-align: left;
     margin: 0;
-    font-size: 15px;
-}
-
-.user {
-    text-align: right;
-    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
 }
 
 .subtitulo {
     color: #769cb3 !important;
-    margin: 0 auto 0 auto;
+    margin: 10px auto 20px auto;
     text-align: center;
-    font-size: 24px !important;
+    font-size: 28px !important;
+    font-weight: bold;
+}
+
+
+.user {
+    border-radius: 50%;
+    box-shadow: rgb(134, 131, 131) 0px 2px 2px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+#imagemBoneco {
+    width: 24px;
+    height: 24px;
+}
+
+#userbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container-lampadas {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 20px;
+    align-items: flex-start; 
+}
+
+
+.card {
+    background: #b8ccd8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    min-height: 250px; 
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .lampada-nome {
     text-align: center;
-    font-size: 14px;
-}
-
-.container-lampadas{
-  display: flex;       
-  gap: 20px;           
-  flex-wrap: wrap;      
-  justify-content: center; 
-  margin-top: 20px; 
-   align-items: center;
-}
-.status{
-  font-size: 12px;
-  margin-top: 10px;
-
-}
-.card {
-   background: #b8ccd8;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    width: 300px;     
-    height: 220px;     
-    overflow: hidden;  
-    display: flex;     
-
-}
-
-.horarios{
-  display: flex;
-  flex-direction: column;
-  gap: 15px; 
-  font-size: 12px;
-}
-
-.status-container {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-
 }
+
+.edit {
+    color: #007bff;
+    padding: 0;
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.horarios {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 15px;
+    padding: 5px;
+    border-top: 1px solid #a0b7c7;
+}
+
+.status {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
 .status-off {
-  color: red;
+    color: #d9534f; 
+    font-weight: bold;
 }
 
 .status-on {
-  color: green;
+    color: #5cb85c; 
+    font-weight: bold;
 }
 
-.bnt-ligar {
-    padding: 8px 20px;
+/* --- Botões de Ligar/Desligar (Dentro do Card) --- */
+.botoes-acao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+.bnt-ligar:hover {
+    background-color: #4cae4c;
+}
+
+.bnt-desligar:hover {
+    background-color: #c9302c;
+}
+
+.btn-add {
+    background: none;
     border: none;
-    border-radius: 5px;
-    background-color: green;
-    color: white;
     cursor: pointer;
-    margin-left: 5px;
+    padding: 0;
+    margin-top: 20px;
 }
 
-.bnt-desligar {
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-     margin-left: 30px
+#addImagem {
+    width: 60px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
-/*botão lápis*/
+#addImagem:hover {
+    opacity: 1;
+}
 
-.borda{
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin: 20px;
+.add-lampada {
+    /* Define o mesmo tamanho e estilo de borda tracejada */
+    width: 250px;
+    min-height: 250px; 
+    background: #e0e9ee;
+    border: 2px dashed #a0b7c7;
     border-radius: 12px;
-    width: 80%;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    
+    box-shadow: none;
+    transition: none; 
 }
 
-.botao {
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    margin-left: 30px;
+.addTitulo {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+
+.borda {
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .botoes {
-  margin-top: 15px;
-  text-align: center;
+    margin-top: 25px;
+    text-align: center;
 }
 
 .botoes button {
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  margin: 0 5px;
-  cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
 }
 
 .cancelar {
-  background: #fff;
-  border: 1px solid #aaa;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
 }
 
 .salvar {
-  background: green;
-  color: white;
+    background: #5cb85c;
+    color: white;
+}
+
+.cancelar:hover, .salvar:hover {
+    opacity: 0.85;
 }
 
 
 
 
-#imagemBoneco{
-  width: 20px;
-  height: 20PX;
- 
-}
-.user{
-  border-radius: 50%;
-  box-shadow: rgb(134, 131, 131) 0px 2px 2px;
-  width: 30px;
-  height: 30px;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  display: flex;
-  cursor: pointer;
-}
-#userbtn{
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
 
+@media (max-width: 768px) {
+    
+    /* Ajusta o container principal para reduzir padding */
+    .container {
+        padding: 20px;
+        margin: 15px auto;
+        width: 95%; 
+    }
 
-.btn-add{
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-#addImagem{
-  width: 90px;
-   cursor: pointer;
-}
-.add-lampada {
-  display: none;
-  justify-items: center;
-  align-items: center;
-}
-.addTitulo{
-  font-size: 14px;
+    /* Ajusta o tamanho da fonte do subtítulo */
+    .subtitulo {
+        font-size: 24px !important;
+    }
+
+    .top-bar {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* --- Cards de Lâmpadas em Coluna --- */
+    
+    .container-lampadas {
+        gap: 20px;
+    }
+    
+    /* Força todos os cards (dinâmicos e de adição) a usarem a largura total */
+    .card, 
+    .add-lampada {
+        width: 90%; 
+        max-width: 400px;
+        /* Remove a altura mínima fixa para permitir o ajuste em telas pequenas,
+           mas a consistência visual ainda será mantida pela largura reduzida. */
+        min-height: auto; 
+        padding: 15px;
+    }
+    
+    /* Se precisar manter uma proporção visual do quadrado no mobile, 
+       ajuste o min-height para 'auto' e defina o padding top/bottom */
+    
+    /* --- Conteúdo dos Cards --- */
+    .lampada-nome {
+        font-size: 16px;
+    }
+
+    .horarios {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .bnt-ligar, .bnt-desligar {
+        padding: 10px;
+        font-size: 14px;
+    }
 }

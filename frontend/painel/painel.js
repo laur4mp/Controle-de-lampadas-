@@ -301,6 +301,14 @@ function atualizarInterfaceLampadas() {
         addCard.style.display = 'flex';
     }
 }
+function fazerLogoff() {
+    usuario = {};
+    emailUser = '';
+    nomeUseCompelto = '';
+    localStorage.removeItem('idUser');
+    localStorage.removeItem('nomeUser');
+    window.location.href = '../index.html'; 
+}
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Greeting
@@ -311,6 +319,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tituloModal = document.getElementById('tituloModal');
     tituloModal.innerHTML = `Usuário: ${nome1}`;
 
+    //desfazer login 
+    const btnSair = document.getElementById('btnSair');
+    if (btnSair) {
+    btnSair.addEventListener('click', fazerLogoff);
+    }
     // buscar Usuário
     try {
         const idUser = localStorage.getItem('idUser');
@@ -469,3 +482,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
+

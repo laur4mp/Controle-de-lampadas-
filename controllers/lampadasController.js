@@ -74,4 +74,4 @@ const deletarLampada = (req, res) => {
 }
 
 
-module.exports = { buscarTudo, buscarNome, criarLampada, atualizarLampada, atualizarEstado, deletarLampada};
+module.exports = { buscarTudo, buscarNome, criarLampada, atualizarLampada, deletarLampada};
